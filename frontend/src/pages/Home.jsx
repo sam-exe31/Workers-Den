@@ -131,7 +131,7 @@ const REVIEWS = [
     short: 'Two people, three hours, spotless. Worth every rupee.',
     full: 'We were moving into a flat that had been empty for months. The team came prepared with their own supplies, did the kitchen and bathrooms first like I asked, and sent photos before and after. Booking was one message and the price was set up front.',
     photos: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnfqZH880QzE7F4sGmDxU4LhBC6F0ojk1bmcxTHhTbrw&s=10',
+      'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=700&auto=format&fit=crop&q=80',
     ],
   },
   {
@@ -139,10 +139,10 @@ const REVIEWS = [
     name: 'Amit Patil', initials: 'AP', locality: 'Wakad',
     service: 'Catering', jobTitle: 'Snacks & setup for 40 guests',
     rating: 4, date: 'Jul 2026',
-    short: 'Just the person was good and as a recruter he was deciplined well',
-    full: 'we were short of people so i orderd one person to make us easy great to work with ',
+    short: 'Punctual, disciplined and easy to work with.',
+    full: 'We were short of people for the event, so I booked one person to help with serving and setup. He arrived on time, followed instructions and was great to work with.',
     photos: [
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrybvyamINedjcl5IHFPi-rpTgMafpUmOQiE_tS7xGg&s=10',
+      'https://images.unsplash.com/photo-1555244162-803834f70033?w=700&auto=format&fit=crop&q=80',
     ],
   },
   {
@@ -502,7 +502,7 @@ function ReviewDialog({ review, onClose, navigate, t }) {
           style={{ borderColor: t.border, background: t.cardHover }}
         >
           <span className="wd-mono text-[10px] font-bold uppercase tracking-widest" style={{ color: t.muted }}>
-            Review · #{review.id}
+            Sample review · #{review.id}
           </span>
           <button
             onClick={onClose}
@@ -585,7 +585,7 @@ function ReviewDialog({ review, onClose, navigate, t }) {
             </span>
             <div className="leading-tight">
               <div className="text-sm font-semibold" style={{ color: t.text }}>{review.name}</div>
-              <div className="wd-mono text-[10px]" style={{ color: t.muted }}>Customer · {review.locality}, Pune</div>
+              <div className="wd-mono text-[10px]" style={{ color: t.muted }}>Sample customer · {review.locality}, Pune</div>
             </div>
           </div>
 
@@ -1010,12 +1010,15 @@ export default function Home() {
             <motion.div {...revealProps} className="flex items-end justify-between flex-wrap gap-4">
               <div className="space-y-2">
                 <span className="wd-mono text-[10px] font-bold uppercase tracking-[0.2em]" style={{ color: t.accent }}>
-                  Signed off by customers
+                  Sample reviews
                 </span>
                 <h2 className="wd-display font-black text-4xl tracking-tight" style={{ color: t.text }}>
                   See the work, not just the stars.
                 </h2>
               </div>
+              <p className="text-[13px] max-w-xs leading-relaxed" style={{ color: t.muted }}>
+  Example reviews showing what a completed job looks like. Real reviews appear here as customers finish jobs.
+</p>
               <p className="text-[13px] max-w-xs leading-relaxed" style={{ color: t.muted }}>
                 Open any review to see what the job was, the photos from it, and exactly why they rated it that way.
               </p>
