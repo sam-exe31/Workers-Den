@@ -797,7 +797,7 @@ export default function Home() {
               </span>
             </motion.div>
 
-            <motion.div {...staggerProps} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            <motion.div key={categories.length > 0 ? 'live' : 'static'} {...staggerProps} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {displayTrades.map((tr) => {
                 const Icon = tr.icon;
                 return (
